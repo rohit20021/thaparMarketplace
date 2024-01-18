@@ -8,7 +8,6 @@ const items= require('./router/items');
 const home= require('./router/home');
 // const config= require('config');
 
-
 process.on('uncaughtException',(ex)=>{
     console.log('we go an uncaught exception');
     process.exit(1);
@@ -38,6 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/users',users); 
 app.use('/api/items',items); 
 app.use('/api/auth',auth);
+app.use('/api/home', home);
 app.use(error);
 
 

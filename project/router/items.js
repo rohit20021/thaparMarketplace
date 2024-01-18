@@ -14,7 +14,7 @@ router.get('/my_items/:id', asyncmiddleware( async (req, res) => {
     try {
         const item = await Item.findById(req.params.id);
         if (!item){
-            res.status(400).send("invilid id ");
+            res.status(400).send("invilids id ");
             return;
         }
         res.send(item);
