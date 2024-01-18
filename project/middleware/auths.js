@@ -8,7 +8,7 @@ function auths(req,res,next){
 function auth(req,res,next){
     const token=req.header('x-auth-token');
     if(!token){
-        res.status(401).send('accesss denied no token provided');
+        res.status(401).send('access denied no token provided');
         return;
     }
     try{
